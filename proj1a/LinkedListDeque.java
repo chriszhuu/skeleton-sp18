@@ -1,8 +1,17 @@
 public class LinkedListDeque<T> {
-    private Node<T> head = new Node<>(this.head, null, this.head);
+    private Node<T> head;
     private int size = 0;
 
+    public LinkedListDeque(){
+        head = new Node<>(null, null, null);
+        head.setPrev(head);
+        head.setNext(head);
+    }
+
 //    public LinkedListDeque(LinkedListDeque other) {
+//        head = new Node<>(null, null, null);
+//            head.setPrev(head);
+//            head.setNext(head);
 //        for (int i = 0; i < other.size(); i++) {
 //            addLast((T) other.get(i));
 //        }
@@ -40,7 +49,6 @@ public class LinkedListDeque<T> {
     }
 
     public T removeFirst() {
-        /*Removes and returns the item at the front of the deque. If no such item exists, returns null*/
         if (size == 0) {
             return null;
         }
@@ -54,7 +62,6 @@ public class LinkedListDeque<T> {
     }
 
     public T removeLast() {
-        /*Removes and returns the item at the back of the deque. If no such item exists, returns null.*/
         if (size == 0) {
             return null;
         }
