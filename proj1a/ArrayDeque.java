@@ -3,6 +3,9 @@ public class ArrayDeque<T> {
     private T[] items = (T[]) new Object[capacity];
     private int size = 0, first = 0, last = 0;
 
+    public ArrayDeque(){
+    }
+
     public ArrayDeque(ArrayDeque other) {
         capacity = other.capacity;
         first = other.first;

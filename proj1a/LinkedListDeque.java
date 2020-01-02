@@ -8,6 +8,9 @@ public class LinkedListDeque<T> {
         }
     }
 
+    public LinkedListDeque() {
+    }
+    
     public void addFirst(T data) {
         Node<T> front = new Node<>(head, data, head.getNext());
         head.getNext().setPrev(front);
