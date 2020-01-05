@@ -33,21 +33,21 @@ public class TestPalindrome {
         assertFalse(palindrome.isPalindrome(norn));
     }
 
-    @Test
-    public void testIsPalindromeRecur() {
-        String a = "a";
-        assertTrue(palindrome.isPalindromeRecur(a));
-        String racecar = "racecar";
-        assertTrue(palindrome.isPalindromeRecur(racecar));
-        String horse = "horse";
-        assertFalse(palindrome.isPalindromeRecur(horse));
-        String b = "";
-        assertTrue(palindrome.isPalindromeRecur(b));
-        String noon = "noon";
-        assertTrue(palindrome.isPalindromeRecur(noon));
-        String norn = "norn";
-        assertFalse(palindrome.isPalindromeRecur(norn));
-    }
+//    @Test
+//    public void testIsPalindromeRecur() {
+//        String a = "a";
+//        assertTrue(palindrome.isPalindromeRecur(a));
+//        String racecar = "racecar";
+//        assertTrue(palindrome.isPalindromeRecur(racecar));
+//        String horse = "horse";
+//        assertFalse(palindrome.isPalindromeRecur(horse));
+//        String b = "";
+//        assertTrue(palindrome.isPalindromeRecur(b));
+//        String noon = "noon";
+//        assertTrue(palindrome.isPalindromeRecur(noon));
+//        String norn = "norn";
+//        assertFalse(palindrome.isPalindromeRecur(norn));
+//    }
 
     @Test
     public void testIsPalindromeOffByOne() {
@@ -66,16 +66,16 @@ public class TestPalindrome {
 //        assertFalse(palindrome.isPalindrome(norn));
     }
 
-    @Test
-    public void testIsPalindromeOffByOneRecur() {
-        CharacterComparator obo = new OffByOne();
-        String a = "a";
-        assertTrue(palindrome.isPalindromeRecur(a, obo));
-        String flake = "flake";
-        assertTrue(palindrome.isPalindromeRecur(flake, obo));
-        String horse = "horse";
-        assertFalse(palindrome.isPalindromeRecur(horse, obo));
-        String b = "";
-        assertTrue(palindrome.isPalindromeRecur(b, obo));
-    }
+//    @Test
+//    public void testIsPalindromeOffByOneRecur() {
+//        CharacterComparator obo = new OffByOne();
+//        String a = "a";
+//        assertTrue(palindrome.isPalindromeRecur(a, obo));
+//        String flake = "flake";
+//        assertTrue(palindrome.isPalindromeRecur(flake, obo));
+//        String horse = "horse";
+//        assertFalse(palindrome.isPalindromeRecur(horse, obo));
+//        String b = "";
+//        assertTrue(palindrome.isPalindromeRecur(b, obo));
+//    }
 }
