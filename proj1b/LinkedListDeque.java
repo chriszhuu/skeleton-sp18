@@ -2,7 +2,7 @@ public class LinkedListDeque<T> implements Deque<T> {
     private Node<T> head;
     private int size = 0;
 
-    public LinkedListDeque(){
+    public LinkedListDeque() {
         head = new Node<>(null, null, null);
         head.setPrev(head);
         head.setNext(head);

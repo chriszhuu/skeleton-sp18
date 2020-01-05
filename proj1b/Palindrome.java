@@ -20,21 +20,21 @@ public class Palindrome {
         return front.equals(back);
     }
 
-    public boolean isPalindromeRecur(String word) {
-        if (word.length() == 0 || word.length() == 1) {
-            return true;
-        }
-        Deque<Character> letters = wordToDeque(word);
-        return isPalindromeRecurHelper(letters);
-    }
-
-    private boolean isPalindromeRecurHelper(Deque<Character> letters) {
-        if (letters.size() < 2) {
-            return true;
-        }
-        boolean partial = letters.removeFirst().equals(letters.removeLast());
-        return partial && isPalindromeRecurHelper(letters);
-    }
+//    public boolean isPalindromeRecur(String word) {
+//        if (word.length() == 0 || word.length() == 1) {
+//            return true;
+//        }
+//        Deque<Character> letters = wordToDeque(word);
+//        return isPalindromeRecurHelper(letters);
+//    }
+//
+//    private boolean isPalindromeRecurHelper(Deque<Character> letters) {
+//        if (letters.size() < 2) {
+//            return true;
+//        }
+//        boolean partial = letters.removeFirst().equals(letters.removeLast());
+//        return partial && isPalindromeRecurHelper(letters);
+//    }
 
     public boolean isPalindrome(String word, CharacterComparator cc) {
         if (word.length() == 0 || word.length() == 1) {
@@ -52,22 +52,22 @@ public class Palindrome {
         return true;
     }
 
-    public boolean isPalindromeRecur(String word, CharacterComparator cc) {
-        if (word.length() == 0 || word.length() == 1) {
-            return true;
-        }
-        Deque<Character> letters = wordToDeque(word);
-        return isPalindromeRecurHelper(letters, cc);
-    }
+//    public boolean isPalindromeRecur(String word, CharacterComparator cc) {
+//        if (word.length() == 0 || word.length() == 1) {
+//            return true;
+//        }
+//        Deque<Character> letters = wordToDeque(word);
+//        return isPalindromeRecurHelper(letters, cc);
+//    }
 
-    private boolean isPalindromeRecurHelper(Deque<Character> letters, CharacterComparator cc) {
-        if (letters.size() < 2) {
-            return true;
-        }
-        char front = letters.removeFirst();
-        char last = letters.removeLast();
-        boolean partial = cc.equalChars(front, last);
-        return partial && isPalindromeRecurHelper(letters, cc);
-    }
+//    private boolean isPalindromeRecurHelper(Deque<Character> letters, CharacterComparator cc) {
+//        if (letters.size() < 2) {
+//            return true;
+//        }
+//        char front = letters.removeFirst();
+//        char last = letters.removeLast();
+//        boolean partial = cc.equalChars(front, last);
+//        return partial && isPalindromeRecurHelper(letters, cc);
+//    }
 
 }
